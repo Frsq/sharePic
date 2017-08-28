@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		084A12BC1F54552A008D955E /* MeiziCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12BB1F54552A008D955E /* MeiziCell.m */; };
+		084A12BF1F54555A008D955E /* Meizi.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12BE1F54555A008D955E /* Meizi.m */; };
+		084A12C61F5457F0008D955E /* SYNavigationDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12C51F5457F0008D955E /* SYNavigationDropdownMenu.m */; };
+		084A12DB1F5458BF008D955E /* SYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12C91F5458BF008D955E /* SYBaseRequest.m */; };
+		084A12DC1F5458BF008D955E /* SYBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12CB1F5458BF008D955E /* SYBatchRequest.m */; };
+		084A12DD1F5458BF008D955E /* SYBatchRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12CD1F5458BF008D955E /* SYBatchRequestManager.m */; };
+		084A12DE1F5458BF008D955E /* SYChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12CF1F5458BF008D955E /* SYChainRequest.m */; };
+		084A12DF1F5458BF008D955E /* SYChainRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12D11F5458BF008D955E /* SYChainRequestManager.m */; };
+		084A12E01F5458BF008D955E /* SYNetworkCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12D41F5458BF008D955E /* SYNetworkCacheManager.m */; };
+		084A12E11F5458BF008D955E /* SYNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12D61F5458BF008D955E /* SYNetworkConfig.m */; };
+		084A12E21F5458BF008D955E /* SYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12D81F5458BF008D955E /* SYNetworkManager.m */; };
+		084A12E31F5458BF008D955E /* SYNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12DA1F5458BF008D955E /* SYNetworkUtil.m */; };
+		084A12E61F545911008D955E /* MeiziRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12E51F545911008D955E /* MeiziRequest.m */; };
+		089912921F516907003A3B21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912911F516907003A3B21 /* main.m */; };
+		089912951F516907003A3B21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912941F516907003A3B21 /* AppDelegate.m */; };
+		089912981F516907003A3B21 /* RandomPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912971F516907003A3B21 /* RandomPicViewController.m */; };
+		0899129B1F516907003A3B21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089912991F516907003A3B21 /* Main.storyboard */; };
+		0899129D1F516907003A3B21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0899129C1F516907003A3B21 /* Assets.xcassets */; };
+		089912A01F516907003A3B21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0899129E1F516907003A3B21 /* LaunchScreen.storyboard */; };
+		089912B61F519D89003A3B21 /* MeiziViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912B51F519D89003A3B21 /* MeiziViewController.m */; };
+		089912BC1F519ED3003A3B21 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912BB1F519ED3003A3B21 /* LoginViewController.m */; };
+		089912BE1F51A4D3003A3B21 /* loginbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 089912BD1F51A4D3003A3B21 /* loginbackground.jpg */; };
+		089912C11F51D82F003A3B21 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912C01F51D82F003A3B21 /* SettingTableViewController.m */; };
+		089912C41F528F91003A3B21 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912C31F528F91003A3B21 /* RegisterViewController.m */; };
+		089912C81F529FAC003A3B21 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 089912C71F529FAC003A3B21 /* libsqlite3.0.tbd */; };
+		089912CB1F52A077003A3B21 /* sqlLiteUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912CA1F52A077003A3B21 /* sqlLiteUtil.m */; };
+		E35C09FA0D23AFD7B60AD7EC /* libPods-sharePic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C627A47BB5A743C8B3C9B3 /* libPods-sharePic.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07D3837B7AC8603FFC7F0F85 /* Pods-sharePic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharePic.release.xcconfig"; path = "Pods/Target Support Files/Pods-sharePic/Pods-sharePic.release.xcconfig"; sourceTree = "<group>"; };
+		084A12BA1F54552A008D955E /* MeiziCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeiziCell.h; sourceTree = "<group>"; };
+		084A12BB1F54552A008D955E /* MeiziCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeiziCell.m; sourceTree = "<group>"; };
+		084A12BD1F54555A008D955E /* Meizi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meizi.h; sourceTree = "<group>"; };
+		084A12BE1F54555A008D955E /* Meizi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meizi.m; sourceTree = "<group>"; };
+		084A12C41F5457F0008D955E /* SYNavigationDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNavigationDropdownMenu.h; sourceTree = "<group>"; };
+		084A12C51F5457F0008D955E /* SYNavigationDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNavigationDropdownMenu.m; sourceTree = "<group>"; };
+		084A12C81F5458BF008D955E /* SYBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYBaseRequest.h; path = SYNetwork/SYBaseRequest.h; sourceTree = "<group>"; };
+		084A12C91F5458BF008D955E /* SYBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYBaseRequest.m; path = SYNetwork/SYBaseRequest.m; sourceTree = "<group>"; };
+		084A12CA1F5458BF008D955E /* SYBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYBatchRequest.h; path = SYNetwork/SYBatchRequest.h; sourceTree = "<group>"; };
+		084A12CB1F5458BF008D955E /* SYBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYBatchRequest.m; path = SYNetwork/SYBatchRequest.m; sourceTree = "<group>"; };
+		084A12CC1F5458BF008D955E /* SYBatchRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYBatchRequestManager.h; path = SYNetwork/SYBatchRequestManager.h; sourceTree = "<group>"; };
+		084A12CD1F5458BF008D955E /* SYBatchRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYBatchRequestManager.m; path = SYNetwork/SYBatchRequestManager.m; sourceTree = "<group>"; };
+		084A12CE1F5458BF008D955E /* SYChainRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYChainRequest.h; path = SYNetwork/SYChainRequest.h; sourceTree = "<group>"; };
+		084A12CF1F5458BF008D955E /* SYChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYChainRequest.m; path = SYNetwork/SYChainRequest.m; sourceTree = "<group>"; };
+		084A12D01F5458BF008D955E /* SYChainRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYChainRequestManager.h; path = SYNetwork/SYChainRequestManager.h; sourceTree = "<group>"; };
+		084A12D11F5458BF008D955E /* SYChainRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYChainRequestManager.m; path = SYNetwork/SYChainRequestManager.m; sourceTree = "<group>"; };
+		084A12D21F5458BF008D955E /* SYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNetwork.h; path = SYNetwork/SYNetwork.h; sourceTree = "<group>"; };
+		084A12D31F5458BF008D955E /* SYNetworkCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNetworkCacheManager.h; path = SYNetwork/SYNetworkCacheManager.h; sourceTree = "<group>"; };
+		084A12D41F5458BF008D955E /* SYNetworkCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNetworkCacheManager.m; path = SYNetwork/SYNetworkCacheManager.m; sourceTree = "<group>"; };
+		084A12D51F5458BF008D955E /* SYNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNetworkConfig.h; path = SYNetwork/SYNetworkConfig.h; sourceTree = "<group>"; };
+		084A12D61F5458BF008D955E /* SYNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNetworkConfig.m; path = SYNetwork/SYNetworkConfig.m; sourceTree = "<group>"; };
+		084A12D71F5458BF008D955E /* SYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNetworkManager.h; path = SYNetwork/SYNetworkManager.h; sourceTree = "<group>"; };
+		084A12D81F5458BF008D955E /* SYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNetworkManager.m; path = SYNetwork/SYNetworkManager.m; sourceTree = "<group>"; };
+		084A12D91F5458BF008D955E /* SYNetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNetworkUtil.h; path = SYNetwork/SYNetworkUtil.h; sourceTree = "<group>"; };
+		084A12DA1F5458BF008D955E /* SYNetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNetworkUtil.m; path = SYNetwork/SYNetworkUtil.m; sourceTree = "<group>"; };
+		084A12E41F545911008D955E /* MeiziRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeiziRequest.h; sourceTree = "<group>"; };
+		084A12E51F545911008D955E /* MeiziRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeiziRequest.m; sourceTree = "<group>"; };
+		084A12E71F545F24008D955E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0899128D1F516907003A3B21 /* sharePic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharePic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		089912911F516907003A3B21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		089912931F516907003A3B21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		089912941F516907003A3B21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		089912961F516907003A3B21 /* RandomPicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomPicViewController.h; sourceTree = "<group>"; };
+		089912971F516907003A3B21 /* RandomPicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomPicViewController.m; sourceTree = "<group>"; };
+		0899129A1F516907003A3B21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0899129C1F516907003A3B21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0899129F1F516907003A3B21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		089912A11F516907003A3B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		089912B41F519D89003A3B21 /* MeiziViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeiziViewController.h; sourceTree = "<group>"; };
+		089912B51F519D89003A3B21 /* MeiziViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeiziViewController.m; sourceTree = "<group>"; };
+		089912BA1F519ED3003A3B21 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		089912BB1F519ED3003A3B21 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		089912BD1F51A4D3003A3B21 /* loginbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginbackground.jpg; sourceTree = "<group>"; };
+		089912BF1F51D82F003A3B21 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		089912C01F51D82F003A3B21 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		089912C21F528F91003A3B21 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		089912C31F528F91003A3B21 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		089912C71F529FAC003A3B21 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		089912C91F52A077003A3B21 /* sqlLiteUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlLiteUtil.h; sourceTree = "<group>"; };
+		089912CA1F52A077003A3B21 /* sqlLiteUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sqlLiteUtil.m; sourceTree = "<group>"; };
+		48C4D2EE22505E9192C510D2 /* Pods-sharePic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharePic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sharePic/Pods-sharePic.debug.xcconfig"; sourceTree = "<group>"; };
+		D8C627A47BB5A743C8B3C9B3 /* libPods-sharePic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sharePic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0899128A1F516907003A3B21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				089912C81F529FAC003A3B21 /* libsqlite3.0.tbd in Frameworks */,
+				E35C09FA0D23AFD7B60AD7EC /* libPods-sharePic.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		084A12B61F5454B2008D955E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		084A12B71F5454BC008D955E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		084A12B81F5454C4008D955E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		084A12B91F5454CE008D955E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		084A12C01F5455D1008D955E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				084A12BD1F54555A008D955E /* Meizi.h */,
+				084A12BE1F54555A008D955E /* Meizi.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		084A12C11F54564D008D955E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				084A12E41F545911008D955E /* MeiziRequest.h */,
+				084A12E51F545911008D955E /* MeiziRequest.m */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		084A12C21F545787008D955E /* SYNavigationDropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				084A12C41F5457F0008D955E /* SYNavigationDropdownMenu.h */,
+				084A12C51F5457F0008D955E /* SYNavigationDropdownMenu.m */,
+			);
+			name = SYNavigationDropdownMenu;
+			sourceTree = "<group>";
+		};
+		084A12C71F54584D008D955E /* SYNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				084A12C81F5458BF008D955E /* SYBaseRequest.h */,
+				084A12C91F5458BF008D955E /* SYBaseRequest.m */,
+				084A12CA1F5458BF008D955E /* SYBatchRequest.h */,
+				084A12CB1F5458BF008D955E /* SYBatchRequest.m */,
+				084A12CC1F5458BF008D955E /* SYBatchRequestManager.h */,
+				084A12CD1F5458BF008D955E /* SYBatchRequestManager.m */,
+				084A12CE1F5458BF008D955E /* SYChainRequest.h */,
+				084A12CF1F5458BF008D955E /* SYChainRequest.m */,
+				084A12D01F5458BF008D955E /* SYChainRequestManager.h */,
+				084A12D11F5458BF008D955E /* SYChainRequestManager.m */,
+				084A12D21F5458BF008D955E /* SYNetwork.h */,
+				084A12D31F5458BF008D955E /* SYNetworkCacheManager.h */,
+				084A12D41F5458BF008D955E /* SYNetworkCacheManager.m */,
+				084A12D51F5458BF008D955E /* SYNetworkConfig.h */,
+				084A12D61F5458BF008D955E /* SYNetworkConfig.m */,
+				084A12D71F5458BF008D955E /* SYNetworkManager.h */,
+				084A12D81F5458BF008D955E /* SYNetworkManager.m */,
+				084A12D91F5458BF008D955E /* SYNetworkUtil.h */,
+				084A12DA1F5458BF008D955E /* SYNetworkUtil.m */,
+			);
+			name = SYNetwork;
+			sourceTree = "<group>";
+		};
+		089912841F516907003A3B21 = {
+			isa = PBXGroup;
+			children = (
+				0899128F1F516907003A3B21 /* sharePic */,
+				0899128E1F516907003A3B21 /* Products */,
+				089912C61F529FAC003A3B21 /* Frameworks */,
+				CE828255658AFCEB4FAB3561 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		0899128E1F516907003A3B21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0899128D1F516907003A3B21 /* sharePic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0899128F1F516907003A3B21 /* sharePic */ = {
+			isa = PBXGroup;
+			children = (
+				089912931F516907003A3B21 /* AppDelegate.h */,
+				089912941F516907003A3B21 /* AppDelegate.m */,
+				089912991F516907003A3B21 /* Main.storyboard */,
+				0899129C1F516907003A3B21 /* Assets.xcassets */,
+				0899129E1F516907003A3B21 /* LaunchScreen.storyboard */,
+				089912C51F529EC5003A3B21 /* Common */,
+				089912A71F516F95003A3B21 /* Module */,
+				089912A91F516FE9003A3B21 /* Vendor */,
+				089912901F516907003A3B21 /* Supporting Files */,
+			);
+			path = sharePic;
+			sourceTree = "<group>";
+		};
+		089912901F516907003A3B21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				089912A11F516907003A3B21 /* Info.plist */,
+				089912BD1F51A4D3003A3B21 /* loginbackground.jpg */,
+				089912911F516907003A3B21 /* main.m */,
+				084A12E71F545F24008D955E /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		089912A71F516F95003A3B21 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				089912B71F519E99003A3B21 /* Login */,
+				089912AA1F51704B003A3B21 /* RandomPic */,
+				089912AB1F51705E003A3B21 /* Rosi */,
+				089912AC1F517082003A3B21 /* Setting */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		089912A91F516FE9003A3B21 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				084A12C71F54584D008D955E /* SYNetwork */,
+				084A12C21F545787008D955E /* SYNavigationDropdownMenu */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		089912AA1F51704B003A3B21 /* RandomPic */ = {
+			isa = PBXGroup;
+			children = (
+				084A12B91F5454CE008D955E /* Request */,
+				084A12B81F5454C4008D955E /* View */,
+				084A12B71F5454BC008D955E /* Model */,
+				084A12B61F5454B2008D955E /* Controller */,
+				089912961F516907003A3B21 /* RandomPicViewController.h */,
+				089912971F516907003A3B21 /* RandomPicViewController.m */,
+			);
+			name = RandomPic;
+			sourceTree = "<group>";
+		};
+		089912AB1F51705E003A3B21 /* Rosi */ = {
+			isa = PBXGroup;
+			children = (
+				084A12C11F54564D008D955E /* Request */,
+				089912B21F519D3C003A3B21 /* View */,
+				084A12C01F5455D1008D955E /* Model */,
+				089912B31F519D46003A3B21 /* Controller */,
+			);
+			name = Rosi;
+			sourceTree = "<group>";
+		};
+		089912AC1F517082003A3B21 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				089912AE1F519C4E003A3B21 /* Controller */,
+				089912AD1F519C39003A3B21 /* View */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		089912AD1F519C39003A3B21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		089912AE1F519C4E003A3B21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				089912BF1F51D82F003A3B21 /* SettingTableViewController.h */,
+				089912C01F51D82F003A3B21 /* SettingTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		089912B21F519D3C003A3B21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				084A12BA1F54552A008D955E /* MeiziCell.h */,
+				084A12BB1F54552A008D955E /* MeiziCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		089912B31F519D46003A3B21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				089912B41F519D89003A3B21 /* MeiziViewController.h */,
+				089912B51F519D89003A3B21 /* MeiziViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		089912B71F519E99003A3B21 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				089912B91F519EB1003A3B21 /* Controller */,
+				089912B81F519EAA003A3B21 /* View */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		089912B81F519EAA003A3B21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		089912B91F519EB1003A3B21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				089912BA1F519ED3003A3B21 /* LoginViewController.h */,
+				089912BB1F519ED3003A3B21 /* LoginViewController.m */,
+				089912C21F528F91003A3B21 /* RegisterViewController.h */,
+				089912C31F528F91003A3B21 /* RegisterViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		089912C51F529EC5003A3B21 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				089912C91F52A077003A3B21 /* sqlLiteUtil.h */,
+				089912CA1F52A077003A3B21 /* sqlLiteUtil.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		089912C61F529FAC003A3B21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089912C71F529FAC003A3B21 /* libsqlite3.0.tbd */,
+				D8C627A47BB5A743C8B3C9B3 /* libPods-sharePic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE828255658AFCEB4FAB3561 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48C4D2EE22505E9192C510D2 /* Pods-sharePic.debug.xcconfig */,
+				07D3837B7AC8603FFC7F0F85 /* Pods-sharePic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0899128C1F516907003A3B21 /* sharePic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 089912A41F516907003A3B21 /* Build configuration list for PBXNativeTarget "sharePic" */;
+			buildPhases = (
+				4463E4EBE11BFA249962F048 /* [CP] Check Pods Manifest.lock */,
+				089912891F516907003A3B21 /* Sources */,
+				0899128A1F516907003A3B21 /* Frameworks */,
+				0899128B1F516907003A3B21 /* Resources */,
+				280CB54EB4BFC336DC0634D8 /* [CP] Embed Pods Frameworks */,
+				38F0643BD51B98F67C2DF438 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sharePic;
+			productName = sharePic;
+			productReference = 0899128D1F516907003A3B21 /* sharePic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089912851F516907003A3B21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = johnqzheng;
+				TargetAttributes = {
+					0899128C1F516907003A3B21 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3SSG2T95U7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 089912881F516907003A3B21 /* Build configuration list for PBXProject "sharePic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 089912841F516907003A3B21;
+			productRefGroup = 0899128E1F516907003A3B21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0899128C1F516907003A3B21 /* sharePic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0899128B1F516907003A3B21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				089912A01F516907003A3B21 /* LaunchScreen.storyboard in Resources */,
+				0899129D1F516907003A3B21 /* Assets.xcassets in Resources */,
+				0899129B1F516907003A3B21 /* Main.storyboard in Resources */,
+				089912BE1F51A4D3003A3B21 /* loginbackground.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		280CB54EB4BFC336DC0634D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sharePic/Pods-sharePic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38F0643BD51B98F67C2DF438 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-sharePic/Pods-sharePic-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sharePic/Pods-sharePic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4463E4EBE11BFA249962F048 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sharePic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		089912891F516907003A3B21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				084A12BF1F54555A008D955E /* Meizi.m in Sources */,
+				089912981F516907003A3B21 /* RandomPicViewController.m in Sources */,
+				089912B61F519D89003A3B21 /* MeiziViewController.m in Sources */,
+				089912BC1F519ED3003A3B21 /* LoginViewController.m in Sources */,
+				089912951F516907003A3B21 /* AppDelegate.m in Sources */,
+				084A12E21F5458BF008D955E /* SYNetworkManager.m in Sources */,
+				084A12E31F5458BF008D955E /* SYNetworkUtil.m in Sources */,
+				084A12DF1F5458BF008D955E /* SYChainRequestManager.m in Sources */,
+				084A12C61F5457F0008D955E /* SYNavigationDropdownMenu.m in Sources */,
+				084A12DD1F5458BF008D955E /* SYBatchRequestManager.m in Sources */,
+				084A12DB1F5458BF008D955E /* SYBaseRequest.m in Sources */,
+				084A12DC1F5458BF008D955E /* SYBatchRequest.m in Sources */,
+				084A12E01F5458BF008D955E /* SYNetworkCacheManager.m in Sources */,
+				084A12BC1F54552A008D955E /* MeiziCell.m in Sources */,
+				084A12E11F5458BF008D955E /* SYNetworkConfig.m in Sources */,
+				089912CB1F52A077003A3B21 /* sqlLiteUtil.m in Sources */,
+				089912C41F528F91003A3B21 /* RegisterViewController.m in Sources */,
+				089912C11F51D82F003A3B21 /* SettingTableViewController.m in Sources */,
+				084A12DE1F5458BF008D955E /* SYChainRequest.m in Sources */,
+				084A12E61F545911008D955E /* MeiziRequest.m in Sources */,
+				089912921F516907003A3B21 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089912991F516907003A3B21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0899129A1F516907003A3B21 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0899129E1F516907003A3B21 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0899129F1F516907003A3B21 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		089912A21F516907003A3B21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		089912A31F516907003A3B21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		089912A51F516907003A3B21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48C4D2EE22505E9192C510D2 /* Pods-sharePic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 3SSG2T95U7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/sharePic/PrefixHeader.pch";
+				INFOPLIST_FILE = sharePic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiang.sharePic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		089912A61F516907003A3B21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07D3837B7AC8603FFC7F0F85 /* Pods-sharePic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 3SSG2T95U7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/sharePic/PrefixHeader.pch";
+				INFOPLIST_FILE = sharePic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiang.sharePic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		089912881F516907003A3B21 /* Build configuration list for PBXProject "sharePic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				089912A21F516907003A3B21 /* Debug */,
+				089912A31F516907003A3B21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		089912A41F516907003A3B21 /* Build configuration list for PBXNativeTarget "sharePic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				089912A51F516907003A3B21 /* Debug */,
+				089912A61F516907003A3B21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089912851F516907003A3B21 /* Project object */;
+}

@@ -28,11 +28,17 @@
 		089912A01F516907003A3B21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0899129E1F516907003A3B21 /* LaunchScreen.storyboard */; };
 		089912B61F519D89003A3B21 /* MeiziViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912B51F519D89003A3B21 /* MeiziViewController.m */; };
 		089912BC1F519ED3003A3B21 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912BB1F519ED3003A3B21 /* LoginViewController.m */; };
-		089912BE1F51A4D3003A3B21 /* loginbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 089912BD1F51A4D3003A3B21 /* loginbackground.jpg */; };
 		089912C11F51D82F003A3B21 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912C01F51D82F003A3B21 /* SettingTableViewController.m */; };
 		089912C41F528F91003A3B21 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912C31F528F91003A3B21 /* RegisterViewController.m */; };
 		089912C81F529FAC003A3B21 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 089912C71F529FAC003A3B21 /* libsqlite3.0.tbd */; };
 		089912CB1F52A077003A3B21 /* sqlLiteUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912CA1F52A077003A3B21 /* sqlLiteUtil.m */; };
+		08FA0D181F56E0770033FD00 /* timg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D111F56E0770033FD00 /* timg1.jpg */; };
+		08FA0D191F56E0770033FD00 /* timg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D121F56E0770033FD00 /* timg2.jpg */; };
+		08FA0D1A1F56E0770033FD00 /* timg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D131F56E0770033FD00 /* timg3.jpg */; };
+		08FA0D1B1F56E0770033FD00 /* timg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D141F56E0770033FD00 /* timg4.jpg */; };
+		08FA0D1C1F56E0770033FD00 /* timg5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D151F56E0770033FD00 /* timg5.jpg */; };
+		08FA0D1D1F56E0770033FD00 /* timg6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D161F56E0770033FD00 /* timg6.jpg */; };
+		08FA0D1E1F56E0770033FD00 /* timg7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D171F56E0770033FD00 /* timg7.jpg */; };
 		E35C09FA0D23AFD7B60AD7EC /* libPods-sharePic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C627A47BB5A743C8B3C9B3 /* libPods-sharePic.a */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +86,6 @@
 		089912B51F519D89003A3B21 /* MeiziViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeiziViewController.m; sourceTree = "<group>"; };
 		089912BA1F519ED3003A3B21 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		089912BB1F519ED3003A3B21 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		089912BD1F51A4D3003A3B21 /* loginbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginbackground.jpg; sourceTree = "<group>"; };
 		089912BF1F51D82F003A3B21 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		089912C01F51D82F003A3B21 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		089912C21F528F91003A3B21 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -88,6 +93,13 @@
 		089912C71F529FAC003A3B21 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		089912C91F52A077003A3B21 /* sqlLiteUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlLiteUtil.h; sourceTree = "<group>"; };
 		089912CA1F52A077003A3B21 /* sqlLiteUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sqlLiteUtil.m; sourceTree = "<group>"; };
+		08FA0D111F56E0770033FD00 /* timg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg1.jpg; sourceTree = "<group>"; };
+		08FA0D121F56E0770033FD00 /* timg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg2.jpg; sourceTree = "<group>"; };
+		08FA0D131F56E0770033FD00 /* timg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg3.jpg; sourceTree = "<group>"; };
+		08FA0D141F56E0770033FD00 /* timg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg4.jpg; sourceTree = "<group>"; };
+		08FA0D151F56E0770033FD00 /* timg5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg5.jpg; sourceTree = "<group>"; };
+		08FA0D161F56E0770033FD00 /* timg6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg6.jpg; sourceTree = "<group>"; };
+		08FA0D171F56E0770033FD00 /* timg7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg7.jpg; sourceTree = "<group>"; };
 		48C4D2EE22505E9192C510D2 /* Pods-sharePic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharePic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sharePic/Pods-sharePic.debug.xcconfig"; sourceTree = "<group>"; };
 		D8C627A47BB5A743C8B3C9B3 /* libPods-sharePic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sharePic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -223,8 +235,14 @@
 		089912901F516907003A3B21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				08FA0D111F56E0770033FD00 /* timg1.jpg */,
+				08FA0D121F56E0770033FD00 /* timg2.jpg */,
+				08FA0D131F56E0770033FD00 /* timg3.jpg */,
+				08FA0D141F56E0770033FD00 /* timg4.jpg */,
+				08FA0D151F56E0770033FD00 /* timg5.jpg */,
+				08FA0D161F56E0770033FD00 /* timg6.jpg */,
+				08FA0D171F56E0770033FD00 /* timg7.jpg */,
 				089912A11F516907003A3B21 /* Info.plist */,
-				089912BD1F51A4D3003A3B21 /* loginbackground.jpg */,
 				089912911F516907003A3B21 /* main.m */,
 				084A12E71F545F24008D955E /* PrefixHeader.pch */,
 			);
@@ -435,9 +453,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				089912A01F516907003A3B21 /* LaunchScreen.storyboard in Resources */,
+				08FA0D191F56E0770033FD00 /* timg2.jpg in Resources */,
+				08FA0D1A1F56E0770033FD00 /* timg3.jpg in Resources */,
 				0899129D1F516907003A3B21 /* Assets.xcassets in Resources */,
+				08FA0D1B1F56E0770033FD00 /* timg4.jpg in Resources */,
+				08FA0D181F56E0770033FD00 /* timg1.jpg in Resources */,
+				08FA0D1E1F56E0770033FD00 /* timg7.jpg in Resources */,
+				08FA0D1C1F56E0770033FD00 /* timg5.jpg in Resources */,
 				0899129B1F516907003A3B21 /* Main.storyboard in Resources */,
-				089912BE1F51A4D3003A3B21 /* loginbackground.jpg in Resources */,
+				08FA0D1D1F56E0770033FD00 /* timg6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +673,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/sharePic/PrefixHeader.pch";
 				INFOPLIST_FILE = sharePic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiang.sharePic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -665,6 +690,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/sharePic/PrefixHeader.pch";
 				INFOPLIST_FILE = sharePic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiang.sharePic;
 				PRODUCT_NAME = "$(TARGET_NAME)";

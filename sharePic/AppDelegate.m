@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SYNetwork.h"
+#import "sqlLiteUtil.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,13 @@
     
     //设置拉取数据时，转菊花的场景，详细信息可以查看http://www.jianshu.com/p/02a0ab269422，iOS常见的四种设置方法：http://www.jianshu.com/p/1ec4dca92e71
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    
+    if (![[sqlLiteUtil shareInstance]createSql:nil]) {
+        NSLog(@"数据表已经存在，不再重复创建");
+    }else {
+        NSLog(@"数据表已经创建");
+    }
+    
     return YES;
 }
 

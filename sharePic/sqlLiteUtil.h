@@ -20,6 +20,12 @@
 //@property sqlite3 *db;
 //@property char *error;
 
-+ (id)sqlLiteUtil;
++ (id)shareInstance;
+- (BOOL)createSql:(NSString *)sql;
+- (BOOL)insertSql:(NSString*)name pass:(NSString*)pass;
+- (BOOL)updateSql:(NSString *)name pass:(NSString *)pass id:(int)id;
+- (BOOL)deleteSql:(int)id;
+- (NSDictionary*)selectSql:(NSString *)name;
+- (void)closeDB;
 
 @end

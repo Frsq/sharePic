@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "sqlLiteUtil.h"
 
-@interface RegisterViewController : UIViewController
+@interface RegisterViewController : UIViewController {
+    NSString *userName;
+    NSString *userPassword;
+    NSString *userPasswordConfirm;
+}
+
+@property(strong, readonly) sqlLiteUtil *sqlUtil;
 
 @end

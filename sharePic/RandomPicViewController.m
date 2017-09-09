@@ -16,8 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [NSThread sleepForTimeInterval:3.0f];
-
+//    [NSThread sleepForTimeInterval:3.0f];
+    [self randomPic];
+    
 }
 
 
@@ -27,11 +28,16 @@
 }
 
 - (IBAction)shareStartRandom:(UIButton *)sender {
+    [self randomPic];
+}
+
+- (void)randomPic {
+    int x = arc4random() % 7 + 1;
     UILabel *randomNum = [self.view viewWithTag:1000];
-    [randomNum setText:@"1"];
+    [randomNum setText:[NSString stringWithFormat:@"随机数是:%d",x]];
     
     UIImageView *randomImg = [self.view viewWithTag:1001];
-    [randomImg setImage:[UIImage imageNamed:@"loginbackground.jpg"]];
+    [randomImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"timg%d.jpg",x]]];
 }
 
 //下载图片

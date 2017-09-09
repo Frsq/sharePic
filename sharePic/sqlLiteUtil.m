@@ -11,8 +11,7 @@
 @implementation sqlLiteUtil
 
 #pragma mark - 设置数据库信息
-
-+ (id)sqlLiteUtil {
++ (id)shareInstance {
     static sqlLiteUtil *sharedSqlUtil = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
@@ -24,26 +23,29 @@
 
 - (id)init {
     if (self == [super init]) {
-        databaseFilePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Desktop/mydb.sqlite"];
-
+        NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        databaseFilePath = [documentPath stringByAppendingPathComponent:@"sharePic.sqlite"];
+        [self OpenDB];
     }
 
     return self;
 }
 
 #pragma mark - 数据库操作
-- (void)OpenDB {
+- (BOOL)OpenDB {
     // 打开数据库，数据库文件不存在时，自动创建文件
     
     if (sqlite3_open([databaseFilePath UTF8String], &db) == SQLITE_OK) {
         NSLog(@"sqlite dadabase is opened.");
+        return YES;
     } else {
         NSLog(@"sqlite dadabase open fail.");
+        return NO;
     }
 
 }
 
-- (void)createSql {
+- (BOOL)createSql:(NSString*)sql {
     /*
      sql 语句，专门用来操作数据库的语句。
      create table if not exists 是固定的，如果表不存在就创建。
@@ -51,86 +53,94 @@
      字段之间用逗号隔开，每一个字段的第一个单词是字段名，第二个单词是数据类型，primary key 代表主键，autoincrement 是自增。
      */
     
-    NSString *createSql = @"create table if not exists myTable(id integer primary key autoincrement, name text, age integer, address text)";
+    NSString *createSql = @"create table if not exists sharePic(id integer primary key autoincrement, username text, userpass text)";
     
     if (sqlite3_exec(db, [createSql UTF8String], NULL, NULL, &error) == SQLITE_OK) {
         NSLog(@"create table is ok.");
+        return YES;
     } else {
         NSLog(@"error: %s", error);
-        
+
         // 每次使用完毕清空 error 字符串，提供给下一次使用
         sqlite3_free(error);
+        return NO;
     }
 }
 
-- (void)insertSql {
-    NSString *insertSql = @"insert into myTable(name, age, address) values('小新', '8', '东城区')";
+- (BOOL)insertSql:(NSString*)name pass:(NSString*)pass {
+    NSString *insertSql = [NSString stringWithFormat:@"insert into sharePic(username, userpass) values('%@', '%@')", name, pass];
     
     if (sqlite3_exec(db, [insertSql UTF8String], NULL, NULL, &error) == SQLITE_OK) {
         NSLog(@"insert operation is ok.");
+        return YES;
     } else {
         NSLog(@"error: %s", error);
         
         // 每次使用完毕清空 error 字符串，提供给下一次使用
         sqlite3_free(error);
+        return NO;
     }
 }
 
-- (void)updateSql {
-    NSString *updateSql = @"update myTable set name = '小白', age = '10', address = '西城区' where id = 2";
+- (BOOL)updateSql:(NSString *)name pass:(NSString *)pass id:(int)id {
+    NSString *updateSql = [NSString stringWithFormat:@"update sharePic set username = '%@', userpass = '%@' where id = %d", name, pass, id];
     
     if (sqlite3_exec(db, [updateSql UTF8String], NULL, NULL, &error) == SQLITE_OK) {
         NSLog(@"update operation is ok.");
+        return YES;
     } else {
         NSLog(@"error: %s", error);
         
         // 每次使用完毕清空 error 字符串，提供给下一次使用
         sqlite3_free(error);
+        return NO;
     }
 }
 
-- (void)deleteSql {
-    NSString *deleteSql = @"delete from myTable where id = 3";
+- (BOOL)deleteSql:(int)id {
+    NSString *deleteSql = [NSString stringWithFormat:@"delete from sharePic where id = %d", id];
     
     if (sqlite3_exec(db, [deleteSql UTF8String], NULL, NULL, &error) == SQLITE_OK) {
         NSLog(@"delete operation is ok.");
+        return YES;
     } else {
         NSLog(@"error: %s", error);
         
         // 每次使用完毕清空 error 字符串，提供给下一次使用
         sqlite3_free(error);
+        return NO;
     }
 }
 
-- (void)selectSql {
+- (NSDictionary *)selectSql:(NSString *)name {
     sqlite3_stmt *statement;
-    
+    NSInteger id;
+    NSString *username;
+    NSString *userpass;
     // @"select * from myTable"  查询所有 key 值内容
-    NSString *selectSql = @"select id, name, age, address from myTable";
+    NSString *selectSql = [NSString stringWithFormat:@"select id, username, userpass from sharePic where username='%@'",name];
     
     if (sqlite3_prepare_v2(db, [selectSql UTF8String], -1, &statement, nil) == SQLITE_OK) {
         
         while(sqlite3_step(statement) == SQLITE_ROW) {
             
             // 查询 id 的值
-            int _id = sqlite3_column_int(statement, 0);
+            int id = sqlite3_column_int(statement, 0);
             
-            // 查询 name 的值
-            NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+            // 查询 username 的值
+            username = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
             
-            // 查询 age
-            int age = sqlite3_column_int(statement, 2);
+            // 查询 userpass
+            userpass = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
             
-            // 查询 name 的值
-            NSString *address = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 3)];
-            
-            NSLog(@"id: %i, name: %@, age: %i, address: %@", _id, name, age, address);
+            NSLog(@"id: %i, username: %@, userpass: %@", id, username, userpass);
         }
     } else {
         NSLog(@"select operation is fail.");
     }
-    
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:username,@"username",userpass,@"userpass", nil];
     sqlite3_finalize(statement);
+    return dict;
 }
 
 - (void)closeDB {

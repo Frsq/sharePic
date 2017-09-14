@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2104" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XoI-zh-Gdd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XoI-zh-Gdd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -185,6 +185,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGO-Nq-gKX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="注册" id="TUL-mP-6vV">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="EHt-Hm-7vV">
+                                            <inset key="imageInsets" minX="15" minY="0.0" maxX="30" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="backLoginVIew:" destination="Ueh-zO-GiR" id="1UR-A9-3WX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpg-tI-Srg">
                                 <rect key="frame" x="32" y="197" width="311" height="30"/>
                                 <nil key="textColor"/>
@@ -211,35 +224,6 @@
                                     <action selector="registerBtn:" destination="Ueh-zO-GiR" eventType="touchUpInside" id="PqM-Ng-cmb"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HZ1-DJ-rUt">
-                                <rect key="frame" x="0.0" y="17" width="375" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ehu-zV-yN0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uqV-sq-HUL">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9LZ-4Q-FPx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9bO-86-YXu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                                                <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hcq-4U-KfI">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                                                    </stackView>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号或邮箱" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HTO-NW-mPS">
                                 <rect key="frame" x="32" y="144" width="311" height="30"/>
                                 <nil key="textColor"/>
@@ -249,44 +233,31 @@
                                     <action selector="userSigChanged:" destination="Ueh-zO-GiR" eventType="editingChanged" id="YFK-op-6Rk"/>
                                 </connections>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGO-Nq-gKX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="注册" id="TUL-mP-6vV">
-                                        <barButtonItem key="leftBarButtonItem" image="Back" id="EHt-Hm-7vV">
-                                            <inset key="imageInsets" minX="15" minY="0.0" maxX="30" maxY="0.0"/>
-                                            <connections>
-                                                <action selector="backLoginVIew:" destination="Ueh-zO-GiR" id="1UR-A9-3WX"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HAu-W9-eF3" firstAttribute="leading" secondItem="FgO-ey-Ma4" secondAttribute="leadingMargin" constant="16" id="01i-0b-Grh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AT8-7D-8kt" secondAttribute="trailing" constant="16" id="1l8-es-6J8"/>
+                            <constraint firstItem="rGO-Nq-gKX" firstAttribute="leading" secondItem="FgO-ey-Ma4" secondAttribute="leading" id="954-iK-C6c"/>
                             <constraint firstItem="AT8-7D-8kt" firstAttribute="top" secondItem="HAu-W9-eF3" secondAttribute="bottom" constant="21" id="HuO-fp-n2a"/>
                             <constraint firstItem="lpg-tI-Srg" firstAttribute="leading" secondItem="FgO-ey-Ma4" secondAttribute="leadingMargin" constant="16" id="I4h-hd-j5q"/>
-                            <constraint firstAttribute="trailing" secondItem="rGO-Nq-gKX" secondAttribute="trailing" id="Irv-Vt-bcg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lpg-tI-Srg" secondAttribute="trailing" constant="16" id="LFQ-Mq-eVy"/>
-                            <constraint firstItem="rGO-Nq-gKX" firstAttribute="top" secondItem="FgO-ey-Ma4" secondAttribute="top" id="Mw3-Zf-GaU"/>
                             <constraint firstItem="lpg-tI-Srg" firstAttribute="top" secondItem="HTO-NW-mPS" secondAttribute="bottom" constant="23" id="S7d-Nl-faw"/>
-                            <constraint firstItem="rGO-Nq-gKX" firstAttribute="leading" secondItem="FgO-ey-Ma4" secondAttribute="leading" id="TfV-5i-llD"/>
-                            <constraint firstItem="HTO-NW-mPS" firstAttribute="top" secondItem="rGO-Nq-gKX" secondAttribute="bottom" constant="100" id="VHW-I8-Pn6"/>
+                            <constraint firstItem="rGO-Nq-gKX" firstAttribute="centerX" secondItem="HTO-NW-mPS" secondAttribute="centerX" id="TbF-ov-gYO"/>
+                            <constraint firstItem="HTO-NW-mPS" firstAttribute="top" secondItem="rGO-Nq-gKX" secondAttribute="bottom" constant="80" id="eEZ-XP-DF8"/>
                             <constraint firstItem="HAu-W9-eF3" firstAttribute="top" secondItem="lpg-tI-Srg" secondAttribute="bottom" constant="23" id="eQO-Zz-XEi"/>
                             <constraint firstItem="HTO-NW-mPS" firstAttribute="leading" secondItem="FgO-ey-Ma4" secondAttribute="leadingMargin" constant="16" id="f3U-ON-RCm"/>
                             <constraint firstItem="AT8-7D-8kt" firstAttribute="leading" secondItem="FgO-ey-Ma4" secondAttribute="leadingMargin" constant="16" id="lbU-6h-KD7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HAu-W9-eF3" secondAttribute="trailing" constant="16" id="lbn-jI-PwE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HTO-NW-mPS" secondAttribute="trailing" constant="16" id="p66-pi-2ck"/>
+                            <constraint firstItem="rGO-Nq-gKX" firstAttribute="top" secondItem="2Sx-pE-mbz" secondAttribute="bottom" id="vks-Hw-6mY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="8JE-7e-Bt6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LtM-u4-W2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1115.625" y="919.0140845070423"/>
+            <point key="canvasLocation" x="-1111" y="905"/>
         </scene>
         <!--设置-->
         <scene sceneID="ilz-kX-cKn">
@@ -385,7 +356,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbF-1P-Vvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1347" y="911"/>
+            <point key="canvasLocation" x="1313" y="911"/>
         </scene>
         <!--Meizi View Controller-->
         <scene sceneID="199-qU-wxL">

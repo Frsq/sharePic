@@ -11,5 +11,6 @@ pod 'SDWebImage'
 pod 'SVProgressHUD'
 pod 'UIActivityIndicator-for-SDWebImage'
 pod 'SYPhotoBrowser'
+pod 'FBAllocationTracker'
 
 end

@@ -41,12 +41,11 @@
     
     NSString *inputUser = sender.text;
     NSDictionary *dict = [_sqlUtil selectSql:inputUser];
-    NSLog(@"inputUser is :%@", inputUser);
     id username = [dict objectForKey:@"username"];
     if ([username isEqualToString:inputUser]) {
         userName = inputUser;
     }else{
-        [self shareAlertMessage:@"账号不存在，请先注册"];
+        [self regisgerAlertMessage:@"账号不存在，请先注册"];
     }
 }
 - (IBAction)userPasswordChanged:(UITextField *)sender {
@@ -55,19 +54,28 @@
     NSLog(@"inputPass is :%@", inputPass);
 }
 - (IBAction)shareLogin:(UIButton *)sender {
-    
-    if (userName && userPassword) {
-        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UITabBarController *mainTabVC = [story instantiateViewControllerWithIdentifier:@"mainTabBarVC"];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self presentViewController:mainTabVC animated:YES completion:nil];
-        });
-    }else{
-        [self shareAlertMessage:@"输入密码错误，请重新输入"];
-    }
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UITabBarController *mainTabVC = [story instantiateViewControllerWithIdentifier:@"mainTabBarVC"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:mainTabVC animated:YES completion:nil];
+    });
+    //if (userName && userPassword) {
+    //    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    //    UITabBarController *mainTabVC = [story instantiateViewControllerWithIdentifier:@"mainTabBarVC"];
+     //   dispatch_async(dispatch_get_main_queue(), ^{
+     //       [self presentViewController:mainTabVC animated:YES completion:nil];
+     //   });
+    //}else{
+    //    [self loginAlertMessage:@"输入密码错误，请重新输入"];
+    //}
 
 }
 - (IBAction)shareRegister:(UIButton *)sender {
+    [self registerIn];
+}
+
+#pragma mark - register
+- (void)registerIn {
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     UIViewController *registerVC = [story instantiateViewControllerWithIdentifier:@"registerVC"];
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -75,15 +83,25 @@
     });
 }
 
-- (void)shareAlertMessage:(NSString*)msg {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@""
-                                                                             message:msg
-                                                                      preferredStyle:UIAlertControllerStyleAlert ];
+#pragma mark - register alert message
+- (void)regisgerAlertMessage:(NSString*)msg {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:msg preferredStyle:UIAlertControllerStyleAlert ];
     
     //添加取消到UIAlertController中
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:cancelAction];
     
+    //添加确定到UIAlertController中
+    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self registerIn];
+    }];
+    [alertController addAction:OKAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)loginAlertMessage:(NSString*)msg {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:msg preferredStyle:UIAlertControllerStyleAlert ];
     //添加确定到UIAlertController中
     UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:OKAction];

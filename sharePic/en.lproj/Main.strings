@@ -1,0 +1,60 @@
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "8JE-7e-Bt6"; */
+"8JE-7e-Bt6.title" = "Title";
+
+/* Class = "UITabBarItem"; title = "图片墙"; ObjectID = "ABg-xl-dip"; */
+"ABg-xl-dip.title" = "图片墙";
+
+/* Class = "UIButton"; normalTitle = "注册"; ObjectID = "AT8-7D-8kt"; */
+"AT8-7D-8kt.normalTitle" = "注册";
+
+/* Class = "UITextField"; placeholder = "手机号／邮箱"; ObjectID = "Eev-sw-XAa"; */
+"Eev-sw-XAa.placeholder" = "手机号／邮箱";
+
+/* Class = "UITextField"; placeholder = "确认密码"; ObjectID = "HAu-W9-eF3"; */
+"HAu-W9-eF3.placeholder" = "确认密码";
+
+/* Class = "UITextField"; placeholder = "请输入手机号或邮箱"; ObjectID = "HTO-NW-mPS"; */
+"HTO-NW-mPS.placeholder" = "请输入手机号或邮箱";
+
+/* Class = "UIButton"; normalTitle = "开始"; ObjectID = "JMN-Zf-GYB"; */
+"JMN-Zf-GYB.normalTitle" = "开始";
+
+/* Class = "UITabBarItem"; title = "随机拍图"; ObjectID = "RZF-2W-nNN"; */
+"RZF-2W-nNN.title" = "随机拍图";
+
+/* Class = "UINavigationItem"; title = "注册"; ObjectID = "TUL-mP-6vV"; */
+"TUL-mP-6vV.title" = "注册";
+
+/* Class = "UILabel"; text = "退出登录"; ObjectID = "VpH-pR-dRa"; */
+"VpH-pR-dRa.text" = "退出登录";
+
+/* Class = "UITabBarItem"; title = "设置"; ObjectID = "b8s-BY-M3u"; */
+"b8s-BY-M3u.title" = "设置";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "dUM-ob-auz"; */
+"dUM-ob-auz.placeholder" = "密码";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "jg0-Uf-FF3"; */
+"jg0-Uf-FF3.normalTitle" = "登录";
+
+/* Class = "UITextField"; placeholder = "输入密码"; ObjectID = "lpg-tI-Srg"; */
+"lpg-tI-Srg.placeholder" = "输入密码";
+
+/* Class = "UIButton"; normalTitle = "新用户注册"; ObjectID = "mUO-HL-k7t"; */
+"mUO-HL-k7t.normalTitle" = "新用户注册";
+
+/* Class = "UILabel"; text = "随机数"; ObjectID = "nGq-mc-0SM"; */
+"nGq-mc-0SM.text" = "随机数";
+
+/* Class = "UILabel"; text = "0.00M"; ObjectID = "pyy-02-32r"; */
+"pyy-02-32r.text" = "0.00M";
+
+/* Class = "UILabel"; text = "清除缓存"; ObjectID = "sgY-oe-o5X"; */
+"sgY-oe-o5X.text" = "清除缓存";
+
+/* Class = "UINavigationItem"; title = "设置"; ObjectID = "uuT-Eu-nLa"; */
+"uuT-Eu-nLa.title" = "设置";
+
+/* Class = "UINavigationItem"; title = "随机拍图"; ObjectID = "xoq-G1-7tF"; */
+"xoq-G1-7tF.title" = "随机拍图";

@@ -19,7 +19,7 @@
 //@property NSString * databaseFilePath;
 //@property sqlite3 *db;
 //@property char *error;
-
++ (sqlLiteUtil *)getSharedInstance;
 + (id)shareInstance;
 - (BOOL)createSql:(NSString *)sql;
 - (BOOL)insertSql:(NSString*)name pass:(NSString*)pass;
@@ -27,5 +27,8 @@
 - (BOOL)deleteSql:(int)id;
 - (NSDictionary*)selectSql:(NSString *)name;
 - (void)closeDB;
+- (BOOL)execSql:(NSString *)sqlstring;
+- (BOOL)isExist:(NSString *)url;
+- (NSMutableArray*)getAllUrl;
 
 @end

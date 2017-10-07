@@ -20,6 +20,7 @@
 		084A12E21F5458BF008D955E /* SYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12D81F5458BF008D955E /* SYNetworkManager.m */; };
 		084A12E31F5458BF008D955E /* SYNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12DA1F5458BF008D955E /* SYNetworkUtil.m */; };
 		084A12E61F545911008D955E /* MeiziRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12E51F545911008D955E /* MeiziRequest.m */; };
+		085E19AE1F6516340053202B /* JiandanRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 085E19AD1F6516340053202B /* JiandanRequest.m */; };
 		089912921F516907003A3B21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912911F516907003A3B21 /* main.m */; };
 		089912951F516907003A3B21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912941F516907003A3B21 /* AppDelegate.m */; };
 		089912981F516907003A3B21 /* RandomPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912971F516907003A3B21 /* RandomPicViewController.m */; };
@@ -32,6 +33,9 @@
 		089912C41F528F91003A3B21 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912C31F528F91003A3B21 /* RegisterViewController.m */; };
 		089912C81F529FAC003A3B21 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 089912C71F529FAC003A3B21 /* libsqlite3.0.tbd */; };
 		089912CB1F52A077003A3B21 /* sqlLiteUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 089912CA1F52A077003A3B21 /* sqlLiteUtil.m */; };
+		089A06921F88B24900EDE57E /* SpiderRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 089A06911F88B24900EDE57E /* SpiderRecord.m */; };
+		089A06951F88D30300EDE57E /* CacheSizeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 089A06941F88D30300EDE57E /* CacheSizeLabel.m */; };
+		089A06981F88D35900EDE57E /* CacheSizeLable+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 089A06971F88D35900EDE57E /* CacheSizeLable+Manager.m */; };
 		08FA0D181F56E0770033FD00 /* timg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D111F56E0770033FD00 /* timg1.jpg */; };
 		08FA0D191F56E0770033FD00 /* timg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D121F56E0770033FD00 /* timg2.jpg */; };
 		08FA0D1A1F56E0770033FD00 /* timg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D131F56E0770033FD00 /* timg3.jpg */; };
@@ -72,6 +76,8 @@
 		084A12E41F545911008D955E /* MeiziRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeiziRequest.h; sourceTree = "<group>"; };
 		084A12E51F545911008D955E /* MeiziRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeiziRequest.m; sourceTree = "<group>"; };
 		084A12E71F545F24008D955E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		085E19AC1F6516340053202B /* JiandanRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiandanRequest.h; sourceTree = "<group>"; };
+		085E19AD1F6516340053202B /* JiandanRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiandanRequest.m; sourceTree = "<group>"; };
 		0899128D1F516907003A3B21 /* sharePic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharePic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089912911F516907003A3B21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		089912931F516907003A3B21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +99,12 @@
 		089912C71F529FAC003A3B21 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		089912C91F52A077003A3B21 /* sqlLiteUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlLiteUtil.h; sourceTree = "<group>"; };
 		089912CA1F52A077003A3B21 /* sqlLiteUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sqlLiteUtil.m; sourceTree = "<group>"; };
+		089A06901F88B24900EDE57E /* SpiderRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpiderRecord.h; sourceTree = "<group>"; };
+		089A06911F88B24900EDE57E /* SpiderRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpiderRecord.m; sourceTree = "<group>"; };
+		089A06931F88D30300EDE57E /* CacheSizeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheSizeLabel.h; sourceTree = "<group>"; };
+		089A06941F88D30300EDE57E /* CacheSizeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheSizeLabel.m; sourceTree = "<group>"; };
+		089A06961F88D35900EDE57E /* CacheSizeLable+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CacheSizeLable+Manager.h"; sourceTree = "<group>"; };
+		089A06971F88D35900EDE57E /* CacheSizeLable+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CacheSizeLable+Manager.m"; sourceTree = "<group>"; };
 		08FA0D111F56E0770033FD00 /* timg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg1.jpg; sourceTree = "<group>"; };
 		08FA0D121F56E0770033FD00 /* timg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg2.jpg; sourceTree = "<group>"; };
 		08FA0D131F56E0770033FD00 /* timg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg3.jpg; sourceTree = "<group>"; };
@@ -120,6 +132,8 @@
 		084A12B61F5454B2008D955E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				089912961F516907003A3B21 /* RandomPicViewController.h */,
+				089912971F516907003A3B21 /* RandomPicViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -198,6 +212,23 @@
 			name = SYNetwork;
 			sourceTree = "<group>";
 		};
+		085E19AA1F6515E30053202B /* Jiandan */ = {
+			isa = PBXGroup;
+			children = (
+				085E19AB1F6515FD0053202B /* Request */,
+			);
+			name = Jiandan;
+			sourceTree = "<group>";
+		};
+		085E19AB1F6515FD0053202B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				085E19AC1F6516340053202B /* JiandanRequest.h */,
+				085E19AD1F6516340053202B /* JiandanRequest.m */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
 		089912841F516907003A3B21 = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +283,7 @@
 		089912A71F516F95003A3B21 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				085E19AA1F6515E30053202B /* Jiandan */,
 				089912B71F519E99003A3B21 /* Login */,
 				089912AA1F51704B003A3B21 /* RandomPic */,
 				089912AB1F51705E003A3B21 /* Rosi */,
@@ -276,8 +308,6 @@
 				084A12B81F5454C4008D955E /* View */,
 				084A12B71F5454BC008D955E /* Model */,
 				084A12B61F5454B2008D955E /* Controller */,
-				089912961F516907003A3B21 /* RandomPicViewController.h */,
-				089912971F516907003A3B21 /* RandomPicViewController.m */,
 			);
 			name = RandomPic;
 			sourceTree = "<group>";
@@ -305,6 +335,10 @@
 		089912AD1F519C39003A3B21 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				089A06931F88D30300EDE57E /* CacheSizeLabel.h */,
+				089A06941F88D30300EDE57E /* CacheSizeLabel.m */,
+				089A06961F88D35900EDE57E /* CacheSizeLable+Manager.h */,
+				089A06971F88D35900EDE57E /* CacheSizeLable+Manager.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -368,6 +402,8 @@
 			children = (
 				089912C91F52A077003A3B21 /* sqlLiteUtil.h */,
 				089912CA1F52A077003A3B21 /* sqlLiteUtil.m */,
+				089A06901F88B24900EDE57E /* SpiderRecord.h */,
+				089A06911F88B24900EDE57E /* SpiderRecord.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -527,8 +563,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089A06981F88D35900EDE57E /* CacheSizeLable+Manager.m in Sources */,
 				084A12BF1F54555A008D955E /* Meizi.m in Sources */,
 				089912981F516907003A3B21 /* RandomPicViewController.m in Sources */,
+				089A06951F88D30300EDE57E /* CacheSizeLabel.m in Sources */,
 				089912B61F519D89003A3B21 /* MeiziViewController.m in Sources */,
 				089912BC1F519ED3003A3B21 /* LoginViewController.m in Sources */,
 				089912951F516907003A3B21 /* AppDelegate.m in Sources */,
@@ -542,8 +580,10 @@
 				084A12E01F5458BF008D955E /* SYNetworkCacheManager.m in Sources */,
 				084A12BC1F54552A008D955E /* MeiziCell.m in Sources */,
 				084A12E11F5458BF008D955E /* SYNetworkConfig.m in Sources */,
+				089A06921F88B24900EDE57E /* SpiderRecord.m in Sources */,
 				089912CB1F52A077003A3B21 /* sqlLiteUtil.m in Sources */,
 				089912C41F528F91003A3B21 /* RegisterViewController.m in Sources */,
+				085E19AE1F6516340053202B /* JiandanRequest.m in Sources */,
 				089912C11F51D82F003A3B21 /* SettingTableViewController.m in Sources */,
 				084A12DE1F5458BF008D955E /* SYChainRequest.m in Sources */,
 				084A12E61F545911008D955E /* MeiziRequest.m in Sources */,

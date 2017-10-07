@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "SYNetwork.h"
 #import "sqlLiteUtil.h"
+#import "JiandanRequest.h"
 
 @interface AppDelegate ()
 
@@ -30,10 +31,10 @@
     }else {
         NSLog(@"数据表已经创建");
     }
-    
+    //启动定时器
+    [self JiandanTimer];
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -61,5 +62,22 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
+#pragma mark - timeer
+- (void)JiandanTimer {
+    
+    NSTimeInterval period = 12 * 60 * 60;//设置时间间隔
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, period * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(_timer, ^{
+        NSLog(@"%@" , [NSThread currentThread]);//打印当前线程
+        JiandanRequest *jr = [[JiandanRequest alloc]init];
+        [jr spidlerJiandanTody];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            
+//        });
+        
+    });
+    dispatch_resume(_timer);
+}
 @end

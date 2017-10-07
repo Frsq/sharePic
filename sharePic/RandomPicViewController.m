@@ -7,6 +7,9 @@
 //
 
 #import "RandomPicViewController.h"
+#import "JiandanRequest.h"
+#import "sqlLiteUtil.h"
+#import "SpiderRecord.h"
 
 @interface RandomPicViewController ()
 
@@ -18,7 +21,6 @@
     [super viewDidLoad];
 //    [NSThread sleepForTimeInterval:3.0f];
     [self randomPic];
-    
 }
 
 
@@ -31,13 +33,42 @@
     [self randomPic];
 }
 
+//- (IBAction)testButton:(UIButton *)sender {
+//    NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
+//    NSInvocationOperation *op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(downloadImage) object:nil];
+//    [operationQueue addOperation:op];
+//}
+
+- (void)downloadImage {
+    NSString *url = @"https://jandan.net/ooxx";
+    JiandanRequest *jr = [[JiandanRequest alloc]init];
+    [jr urlString:url];
+}
+
 - (void)randomPic {
-    int x = arc4random() % 7 + 1;
-    UILabel *randomNum = [self.view viewWithTag:1000];
-    [randomNum setText:[NSString stringWithFormat:@"随机数是:%d",x]];
+    sqlLiteUtil *sqlutil = [sqlLiteUtil getSharedInstance];
+    NSMutableArray *array = [sqlutil getAllUrl];
     
-    UIImageView *randomImg = [self.view viewWithTag:1001];
-    [randomImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"timg%d.jpg",x]]];
+    int num = arc4random() % array.count;
+    SpiderRecord *sp = array[num];
+    UILabel *randomNum = [self.view viewWithTag:1000];
+    [randomNum setText:[NSString stringWithFormat:@"随机数是:%ld",(long)sp.randomnum]];
+    [self getImageFromURL2:sp.url];
+    
+//    UIImageView *randomImg = [self.view viewWithTag:1001];
+//    [randomImg setImage:[self getImageFromURL:sp.url]];
+//    [self insert2DB:num urlString:@""];
+}
+
+- (void)insert2DB:(NSInteger)num urlString:(NSString *)urlstring {
+    NSString *httpurl = [NSString stringWithFormat:@"http:%@",urlstring];
+    sqlLiteUtil *sqlutil = [sqlLiteUtil getSharedInstance];
+    NSString *createSql = @"create table if not exists RandmPic(id integer primary key autoincrement, randomnum int, url text, recordtime text)";
+    if([sqlutil execSql:createSql]){
+        NSString *insertSql = [NSString stringWithFormat:@"insert into RandomPic(randomnum, url, recordtime) values('%ld','%@', '%@')", (long)num,httpurl, @""];
+        [sqlutil execSql:insertSql];
+    }
+    [sqlutil closeDB];
 }
 
 //下载图片
@@ -63,6 +94,41 @@
     
     //[imageView setImage:[UIImage imageNamed:@"desc_bn.png"]];
     [self.view addSubview:imageView];
+}
+
+- (void)getImageFromURL2:(NSString*)url {
+    NSURL *httpurl = [NSURL URLWithString:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:httpurl];
+    request.cachePolicy = NSURLRequestReturnCacheDataElseLoad;
+//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+//        if (data) {
+//            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+//            NSLog(@"%@", dict);
+//         }
+//    }];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"response is %@, error is:%@", response, error);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImage * result = [UIImage imageWithData:data];
+            UIImageView *randomImg = [self.view viewWithTag:1001];
+            [randomImg setImage:result];
+        });
+//        // NSLog(@"%@ %tu", response, data.length);
+//        // 类型转换（如果将父类设置给子类，需要强制转换）
+//        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+//        NSLog(@"statusCode == %@", @(httpResponse.statusCode));
+//        // 判断响应的状态码是否是 304 Not Modified （更多状态码含义解释： https://github.com/ChenYilong/iOSDevelopmentTips）
+//        if (httpResponse.statusCode == 304) {
+//            NSLog(@"加载本地缓存图片");
+//            // 如果是，使用本地缓存
+//            // 根据请求获取到`被缓存的响应`！
+//            NSCachedURLResponse *cacheResponse =  [[NSURLCache sharedURLCache] cachedResponseForRequest:request];
+//            // 拿到缓存的数据
+//            data = cacheResponse.data;
+//        }
+    }];
+    [task resume];
 }
 
 @end

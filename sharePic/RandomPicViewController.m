@@ -21,6 +21,15 @@
     [super viewDidLoad];
 //    [NSThread sleepForTimeInterval:3.0f];
     [self randomPic];
+    // 单击的 Recognizer
+    UITapGestureRecognizer* singleRecognizer;
+    singleRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(SingleTap:)];
+    //点击的次数
+    singleRecognizer.numberOfTapsRequired = 1; // 单击
+    
+    //给self.view添加一个手势监测；
+    
+    [self.view addGestureRecognizer:singleRecognizer];
 }
 
 
@@ -129,6 +138,11 @@
 //        }
     }];
     [task resume];
+}
+
+-(void)SingleTap:(UITapGestureRecognizer*)recognizer{
+    //处理单击操作
+    [self randomPic];
 }
 
 @end

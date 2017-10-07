@@ -10,6 +10,6 @@
 
 @interface RandomPicViewController : UIViewController
 
-
+-(void)SingleTap:(UITapGestureRecognizer*)recognizer;
 @end
 

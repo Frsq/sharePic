@@ -42,16 +42,17 @@
     [self randomPic];
 }
 
-//- (IBAction)testButton:(UIButton *)sender {
-//    NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
-//    NSInvocationOperation *op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(downloadImage) object:nil];
-//    [operationQueue addOperation:op];
-//}
-
 - (void)downloadImage {
     NSString *url = @"https://jandan.net/ooxx";
     JiandanRequest *jr = [[JiandanRequest alloc]init];
     [jr urlString:url];
+}
+- (IBAction)downloadHistory:(id)sender {
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UIViewController *historyVC = [story instantiateViewControllerWithIdentifier:@"historyVC"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:historyVC animated:YES completion:nil];
+    });
 }
 
 - (void)randomPic {

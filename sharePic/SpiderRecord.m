@@ -27,7 +27,14 @@
 - (void)setIsdownload:(BOOL)isdownload{
     _isdownload = isdownload;
 }
-- (NSString*)url{ return _url; }
-- (NSInteger)randomnum{return _randomNum;}
-- (BOOL)isdownload{return _isdownload;}
+- (NSString*)url{
+    return _url;
+}
+- (NSInteger)randomnum{
+    return _randomNum;
+}
+- (BOOL)isdownload{
+    return _isdownload;
+}
+
 @end

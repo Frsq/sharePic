@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RandomPicViewController.h"
+#import "ZJHttpRequest.h"
 
 @interface LoginViewController ()
 
@@ -58,21 +59,43 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self presentViewController:mainTabVC animated:YES completion:nil];
     });
-    //if (userName && userPassword) {
-    //    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    //    UITabBarController *mainTabVC = [story instantiateViewControllerWithIdentifier:@"mainTabBarVC"];
-     //   dispatch_async(dispatch_get_main_queue(), ^{
-     //       [self presentViewController:mainTabVC animated:YES completion:nil];
-     //   });
-    //}else{
-    //    [self loginAlertMessage:@"输入密码错误，请重新输入"];
-    //}
+    if (userName && userPassword) {
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UITabBarController *mainTabVC = [story instantiateViewControllerWithIdentifier:@"mainTabBarVC"];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:mainTabVC animated:YES completion:nil];
+        });
+    }else{
+        [self loginAlertMessage:@"输入密码错误，请重新输入"];
+    }
 
 }
 - (IBAction)shareRegister:(UIButton *)sender {
     [self registerIn];
 }
 
+#pragma mark - test for everything,just for test
+- (IBAction)testLogic:(id)sender {
+    //拿到urlString
+    NSString *urlString = @"http://avtest.qq.com/tlscgi/cgi-bin/gensig?appid=1400035750&id=14827&acctype=14181";
+    NSURLSession *session = [NSURLSession sharedSession];
+    //编码
+    urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    
+    //转换成NSURL
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        //    //Json数据格式解析，利用系统提供的API进行Jison数据解析
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"dictionary is %@", dictionary);
+        ZJHttpRequest *weibo = [[ZJHttpRequest alloc]initWithDictionary:dictionary];
+        SigModel *sig = [[SigModel alloc]initWithDictionary:weibo.rspbody];
+        NSLog(@"sig is %@", sig.sig);
+    }];
+    [task resume];
+
+}
 #pragma mark - register
 - (void)registerIn {
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];

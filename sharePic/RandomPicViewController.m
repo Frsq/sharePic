@@ -110,12 +110,6 @@
     NSURL *httpurl = [NSURL URLWithString:url];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:httpurl];
     request.cachePolicy = NSURLRequestReturnCacheDataElseLoad;
-//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-//        if (data) {
-//            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-//            NSLog(@"%@", dict);
-//         }
-//    }];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSLog(@"response is %@, error is:%@", response, error);
@@ -124,19 +118,6 @@
             UIImageView *randomImg = [self.view viewWithTag:1001];
             [randomImg setImage:result];
         });
-//        // NSLog(@"%@ %tu", response, data.length);
-//        // 类型转换（如果将父类设置给子类，需要强制转换）
-//        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-//        NSLog(@"statusCode == %@", @(httpResponse.statusCode));
-//        // 判断响应的状态码是否是 304 Not Modified （更多状态码含义解释： https://github.com/ChenYilong/iOSDevelopmentTips）
-//        if (httpResponse.statusCode == 304) {
-//            NSLog(@"加载本地缓存图片");
-//            // 如果是，使用本地缓存
-//            // 根据请求获取到`被缓存的响应`！
-//            NSCachedURLResponse *cacheResponse =  [[NSURLCache sharedURLCache] cachedResponseForRequest:request];
-//            // 拿到缓存的数据
-//            data = cacheResponse.data;
-//        }
     }];
     [task resume];
 }
@@ -145,5 +126,6 @@
     //处理单击操作
     [self randomPic];
 }
+
 
 @end

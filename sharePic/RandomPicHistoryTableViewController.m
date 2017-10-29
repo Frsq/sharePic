@@ -19,13 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"历史记录";
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     sqlLiteUtil *sqlutil = [sqlLiteUtil getSharedInstance];
     _historyArray = [sqlutil getAllUrl];
     
     UINib *nib = [UINib nibWithNibName:@"HistoryTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"historyCell"];
+    self.tableView.tableFooterView = [[UIView alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,6 +32,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)backButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -53,6 +55,9 @@
     
     return cell;
 }
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//}
 
 /*
 // Override to support conditional editing of the table view.

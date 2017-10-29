@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XoI-zh-Gdd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XoI-zh-Gdd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                 <navigationController id="qaX-vF-NRu" userLabel="随机图" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="随机拍图" image="Home" id="RZF-2W-nNN" userLabel="随机拍图"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2QQ-FB-NKl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -66,13 +66,76 @@
             </objects>
             <point key="canvasLocation" x="1311.2" y="-440.32983508245883"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="FCU-KU-fEn">
+            <objects>
+                <tableViewController id="TJJ-Fd-yF2" customClass="RandomPicHistoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wyu-2I-Wve">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DmN-I4-SPJ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DmN-I4-SPJ" id="9lh-DL-QUj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TJJ-Fd-yF2" id="Ev8-MH-CLV"/>
+                            <outlet property="delegate" destination="TJJ-Fd-yF2" id="Meb-Pd-w0r"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="7U2-r1-hR1">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="SXF-Ex-E2U">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qan-Ks-xfu">
+                                <rect key="frame" x="16" y="7" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="backButton:" destination="TJJ-Fd-yF2" eventType="touchUpInside" id="ZPn-vE-gGN"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="XfV-K0-oeN">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l0N-BF-BeO">
+                                <rect key="frame" x="328" y="7" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="前进"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P4c-aM-cnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3386" y="-546"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gbF-Yu-gzP">
+            <objects>
+                <navigationController restorationIdentifier="historyVC" storyboardIdentifier="historyVC" id="1YB-9f-eBN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uYD-xB-2q9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TJJ-Fd-yF2" kind="relationship" relationship="rootViewController" id="BEc-E0-unJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4PQ-T1-dh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2434" y="-546"/>
+        </scene>
         <!--图片墙-->
         <scene sceneID="hxN-lf-4Hk">
             <objects>
                 <navigationController id="txz-dp-Rxh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="图片墙" image="Image" id="ABg-xl-dip"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EN2-Yh-x0j">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -133,6 +196,14 @@
                                 <state key="normal" title="新用户注册"/>
                                 <connections>
                                     <action selector="shareRegister:" destination="XoI-zh-Gdd" eventType="touchUpInside" id="Iu5-C9-MRw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef6-1M-Vfc">
+                                <rect key="frame" x="130" y="481" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="就是测试按钮"/>
+                                <connections>
+                                    <action selector="testLogic:" destination="XoI-zh-Gdd" eventType="touchUpInside" id="1yF-fj-DhT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -249,7 +320,7 @@
                 <navigationController id="gLj-L2-Kvy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="设置" image="Setting" id="b8s-BY-M3u"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LRU-qh-D7u">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -393,34 +464,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="881-hN-NxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1312.8" y="215.44227886056973"/>
-        </scene>
-        <!--Random Pic History Table View Controller-->
-        <scene sceneID="wOu-uN-9WE">
-            <objects>
-                <tableViewController storyboardIdentifier="historyVC" id="X7Q-wS-NOb" customClass="RandomPicHistoryTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="url-hT-ONC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="acM-dg-k42" customClass="HistoryTableViewCell">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="acM-dg-k42" id="glO-YC-426">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="X7Q-wS-NOb" id="DJx-US-KBS"/>
-                            <outlet property="delegate" destination="X7Q-wS-NOb" id="BwR-pt-Cw9"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cug-ky-fP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2182" y="-440"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WS3-c9-KzS">

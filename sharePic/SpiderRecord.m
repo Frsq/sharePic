@@ -16,6 +16,7 @@
         _randomNum = randomnum;
         _isdownload = isdownload;
     }
+    //test
     return self;
 }
 - (void)setUrl:(NSString*)url{

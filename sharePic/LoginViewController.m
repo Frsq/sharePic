@@ -59,15 +59,15 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self presentViewController:mainTabVC animated:YES completion:nil];
     });
-    if (userName && userPassword) {
-        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UITabBarController *mainTabVC = [story instantiateViewControllerWithIdentifier:@"mainTabBarVC"];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self presentViewController:mainTabVC animated:YES completion:nil];
-        });
-    }else{
-        [self loginAlertMessage:@"输入密码错误，请重新输入"];
-    }
+//    if (userName && userPassword) {
+//        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//        UITabBarController *mainTabVC = [story instantiateViewControllerWithIdentifier:@"mainTabBarVC"];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self presentViewController:mainTabVC animated:YES completion:nil];
+//        });
+//    }else{
+//        [self loginAlertMessage:@"输入密码错误，请重新输入"];
+//    }
 
 }
 - (IBAction)shareRegister:(UIButton *)sender {

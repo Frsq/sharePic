@@ -94,7 +94,9 @@
     photoBrowser.enableStatusBarHidden = NO;
     photoBrowser.pageControlStyle = SYPhotoBrowserPageControlStyleLabel;
     photoBrowser.initialPageIndex = indexPath.item;
-    [((AppDelegate *)[UIApplication sharedApplication].delegate).window.rootViewController presentViewController:photoBrowser animated:YES completion:nil];
+//    [((AppDelegate *)[UIApplication sharedApplication].delegate).window.rootViewController presentViewController:photoBrowser animated:YES completion:nil];
+    [self presentViewController:photoBrowser animated:YES completion:nil];
+    
 }
 
 //这里添加一个长按显示菜单键
@@ -234,7 +236,7 @@
 }
 
 - (NSMutableArray *)meiziArray {
-    NSLog(@"--- %s ---",__func__);//__func__打印方法名
+    NSLog(@"--- %s ---meiziArray",__func__);//__func__打印方法名
     if (_meiziArray == nil) {
         _meiziArray = [NSMutableArray arrayWithArray:[MeiziRequest cachedMeiziArrayWithCategory:MeiziCategoryAll]];
     }

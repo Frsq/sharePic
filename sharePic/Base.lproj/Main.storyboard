@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="1311.2" y="-440.32983508245883"/>
         </scene>
-        <!--Root View Controller-->
+        <!--随机抓图历史记录-->
         <scene sceneID="FCU-KU-fEn">
             <objects>
                 <tableViewController id="TJJ-Fd-yF2" customClass="RandomPicHistoryTableViewController" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DmN-I4-SPJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DmN-I4-SPJ" customClass="HistoryTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DmN-I4-SPJ" id="9lh-DL-QUj">
@@ -89,7 +89,7 @@
                             <outlet property="delegate" destination="TJJ-Fd-yF2" id="Meb-Pd-w0r"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="7U2-r1-hR1">
+                    <navigationItem key="navigationItem" title="随机抓图历史记录" id="7U2-r1-hR1">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="SXF-Ex-E2U">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qan-Ks-xfu">
                                 <rect key="frame" x="16" y="7" width="31" height="30"/>

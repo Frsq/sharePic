@@ -82,11 +82,10 @@
 
 - (void)insert2DB:(NSString *)urlstring {
     sqlutil = [[sqlLiteUtil alloc]init];
-    int randomnum = 100;
-    NSString *createSql = @"create table if not exists Jiandan(id integer primary key autoincrement, randomnum int, url text, isdownload int)";
+    NSString *createSql = @"create table if not exists Jiandan(id integer primary key autoincrement, url text, localurl text, isdownload int)";
     if([sqlutil execSql:createSql] && ![sqlutil isExist:urlstring]){
         NSLog(@"insert into db:%@", urlstring);
-        NSString *insertSql = [NSString stringWithFormat:@"insert into Jiandan(randomnum, url, isdownload) values('%d', '%@', '%d')", randomnum, urlstring, 0];
+        NSString *insertSql = [NSString stringWithFormat:@"insert into Jiandan(url, localurl, isdownload) values('%@', '%@', '%d')", urlstring, @"", 0];
         [sqlutil execSql:insertSql];
     }
     [sqlutil closeDB];

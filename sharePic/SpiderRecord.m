@@ -10,11 +10,12 @@
 
 @implementation SpiderRecord
 
--(id)initWithUrl:(NSString*)url num:(NSInteger)randomnum isdownload:(BOOL)isdownload {
+-(id)initWithUrl:(NSString*)url localurl:(NSString*)localurl isdownload:(BOOL)isdownload sqlid:(int)sqlid{
     if (nil != [super init]) {
         _url = url;
-        _randomNum = randomnum;
+        _localurl = localurl;
         _isdownload = isdownload;
+        _sqlid = sqlid;
     }
     //test
     return self;
@@ -22,20 +23,19 @@
 - (void)setUrl:(NSString*)url{
     _url = url;
 }
-- (void)setRandomnum:(NSInteger)randomnum{
-    _randomNum = randomnum;
-}
 - (void)setIsdownload:(BOOL)isdownload{
     _isdownload = isdownload;
 }
 - (NSString*)url{
     return _url;
 }
-- (NSInteger)randomnum{
-    return _randomNum;
+- (NSString*)localurl{
+    return _localurl;
 }
 - (BOOL)isdownload{
     return _isdownload;
 }
-
+-(int)sqlid{
+    return _sqlid;
+}
 @end

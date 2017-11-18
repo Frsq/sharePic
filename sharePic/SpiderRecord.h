@@ -11,16 +11,17 @@
 @interface SpiderRecord : NSObject{
     @public
     NSString *_url;
-    NSInteger _randomNum;
+    NSString *_localurl;
     BOOL _isdownload;
+    int _sqlid;
 }
-- (id)initWithUrl:(NSString*)url num:(NSInteger)randomnum isdownload:(BOOL)isdownload;
+- (id)initWithUrl:(NSString*)url localurl:(NSString*)localurl isdownload:(BOOL)isdownload sqlid:(int)sqlid;
 - (void)setUrl:(NSString*)url;
-- (void)setRandomnum:(NSInteger)randomnum;
 - (void)setIsdownload:(BOOL)isdownload;
 - (NSString*)url;
-- (NSInteger)randomnum;
+- (NSString*)localurl;
 - (BOOL)isdownload;
+- (int)sqlid;
 
 
 @end

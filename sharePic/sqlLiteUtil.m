@@ -170,10 +170,9 @@ static sqlLiteUtil *sharedIntance = nil;
 
 - (BOOL)isExist:(NSString *)url {
     sqlite3_stmt *statement;
-    NSInteger randomnum;
-    BOOL isexist = 0;
+    BOOL isexist = NO;
     // @"select * from myTable"  查询所有 key 值内容
-    NSString *selectSql = [NSString stringWithFormat:@"select id, randomnum, url, isdownload from Jiandan where url='%@'",url];
+    NSString *selectSql = [NSString stringWithFormat:@"select id, url, localurl, isdownload from Jiandan where url='%@'",url];
     
     if (sqlite3_prepare_v2(db, [selectSql UTF8String], -1, &statement, nil) == SQLITE_OK) {
         
@@ -184,9 +183,9 @@ static sqlLiteUtil *sharedIntance = nil;
             if (sqlite3_column_int(statement, 0)) {
                 isexist = YES;
             }
-            // 查询 randomnum 的值
-            randomnum = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
-            NSLog(@"id: %d, randomum: %ld, url: %@", id, (long)randomnum, url);
+//            // 查询 randomnum 的值
+//            randomnum = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+//            NSLog(@"id: %d, url:%@, localurl:%@", id, (long)randomnum, url);
         }
     } else {
         NSLog(@"select operation is fail.");
@@ -195,33 +194,31 @@ static sqlLiteUtil *sharedIntance = nil;
     return isexist;
 }
 
+//TODO: 需要修改下调用数据库的方式，全局方式调用处理
 - (NSMutableArray*)getAllUrl {
     NSMutableArray *urlArray = [NSMutableArray array];
     sqlite3_stmt *statement=nil;
     //    NSInteger id;
     NSString *url;
-    NSInteger randomnum;
-    BOOL isdownload = NO;
+    NSString *localurl;
     // @"select * from myTable"  查询所有 key 值内容
-    NSString *selectSql = [NSString stringWithFormat:@"select randomnum, url, isdownload from Jiandan;"];
+    NSString *selectSql = [NSString stringWithFormat:@"select url, localurl, isdownload from Jiandan;"];
     
     if (sqlite3_prepare_v2(db, [selectSql UTF8String], -1, &statement, nil) == SQLITE_OK) {
         
         while(sqlite3_step(statement) == SQLITE_ROW) {
             
             // 查询 randomnum 的值
-            randomnum = sqlite3_column_int(statement, 0);
+            int sqlid = sqlite3_column_int(statement, 0);
             
             // 查询 url 的值
-            url = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+            url = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 0)];
             
-            // 查询 isdownload
-            if (sqlite3_column_int(statement, 2)) {
-                isdownload = YES;
-            }
-            SpiderRecord *sp = [[SpiderRecord alloc]initWithUrl:url num:randomnum isdownload:isdownload];
+            localurl = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+            
+            SpiderRecord *sp = [[SpiderRecord alloc]initWithUrl:url localurl:localurl isdownload:0 sqlid:sqlid];
             [urlArray addObject:sp];
-            NSLog(@"randomnum: %ld, url: %@, isdownload: %@",(long)randomnum, url, isdownload);
+            NSLog(@"url: %@, localurl: %@, isdownload: %d",url, localurl, 0);
         }
     } else {
         NSLog(@"select operation is fail.");

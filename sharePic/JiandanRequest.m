@@ -18,7 +18,7 @@
     NSData *data = [NSData dataWithContentsOfURL:url];
     NSString *retStr = [[NSString alloc] initWithData:data encoding:nil];
     
-    NSLog(@"html = %@", retStr);
+//    NSLog(@"html = %@", retStr);
     [self subUrlsByRegular:retStr regular:@""];
     
     return  retStr;

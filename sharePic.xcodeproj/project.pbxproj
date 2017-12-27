@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081C130E1FC81B1B00ED3D9F /* backgroud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 081C130D1FC81B1A00ED3D9F /* backgroud.jpg */; };
 		084A12BC1F54552A008D955E /* MeiziCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12BB1F54552A008D955E /* MeiziCell.m */; };
 		084A12BF1F54555A008D955E /* Meizi.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12BE1F54555A008D955E /* Meizi.m */; };
 		084A12C61F5457F0008D955E /* SYNavigationDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 084A12C51F5457F0008D955E /* SYNavigationDropdownMenu.m */; };
@@ -43,18 +44,12 @@
 		08CF29C11FA5AD7E0015600D /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CF29C01FA5AD7E0015600D /* TencentOpenAPI.framework */; };
 		08CF29C61FA5AE600015600D /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CF29C51FA5AE600015600D /* libiconv.tbd */; };
 		08CF29CA1FA5C4100015600D /* sharePicUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CF29C91FA5C4100015600D /* sharePicUtil.m */; };
-		08FA0D181F56E0770033FD00 /* timg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D111F56E0770033FD00 /* timg1.jpg */; };
-		08FA0D191F56E0770033FD00 /* timg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D121F56E0770033FD00 /* timg2.jpg */; };
-		08FA0D1A1F56E0770033FD00 /* timg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D131F56E0770033FD00 /* timg3.jpg */; };
-		08FA0D1B1F56E0770033FD00 /* timg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D141F56E0770033FD00 /* timg4.jpg */; };
-		08FA0D1C1F56E0770033FD00 /* timg5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D151F56E0770033FD00 /* timg5.jpg */; };
-		08FA0D1D1F56E0770033FD00 /* timg6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D161F56E0770033FD00 /* timg6.jpg */; };
-		08FA0D1E1F56E0770033FD00 /* timg7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08FA0D171F56E0770033FD00 /* timg7.jpg */; };
 		E35C09FA0D23AFD7B60AD7EC /* libPods-sharePic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C627A47BB5A743C8B3C9B3 /* libPods-sharePic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07D3837B7AC8603FFC7F0F85 /* Pods-sharePic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharePic.release.xcconfig"; path = "Pods/Target Support Files/Pods-sharePic/Pods-sharePic.release.xcconfig"; sourceTree = "<group>"; };
+		081C130D1FC81B1A00ED3D9F /* backgroud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroud.jpg; sourceTree = "<group>"; };
 		084A12BA1F54552A008D955E /* MeiziCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeiziCell.h; sourceTree = "<group>"; };
 		084A12BB1F54552A008D955E /* MeiziCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeiziCell.m; sourceTree = "<group>"; };
 		084A12BD1F54555A008D955E /* Meizi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meizi.h; sourceTree = "<group>"; };
@@ -127,13 +122,6 @@
 		08CF29C71FA5AE6F0015600D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		08CF29C81FA5C4100015600D /* sharePicUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sharePicUtil.h; sourceTree = "<group>"; };
 		08CF29C91FA5C4100015600D /* sharePicUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sharePicUtil.m; sourceTree = "<group>"; };
-		08FA0D111F56E0770033FD00 /* timg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg1.jpg; sourceTree = "<group>"; };
-		08FA0D121F56E0770033FD00 /* timg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg2.jpg; sourceTree = "<group>"; };
-		08FA0D131F56E0770033FD00 /* timg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg3.jpg; sourceTree = "<group>"; };
-		08FA0D141F56E0770033FD00 /* timg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg4.jpg; sourceTree = "<group>"; };
-		08FA0D151F56E0770033FD00 /* timg5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg5.jpg; sourceTree = "<group>"; };
-		08FA0D161F56E0770033FD00 /* timg6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg6.jpg; sourceTree = "<group>"; };
-		08FA0D171F56E0770033FD00 /* timg7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg7.jpg; sourceTree = "<group>"; };
 		48C4D2EE22505E9192C510D2 /* Pods-sharePic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharePic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sharePic/Pods-sharePic.debug.xcconfig"; sourceTree = "<group>"; };
 		D8C627A47BB5A743C8B3C9B3 /* libPods-sharePic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sharePic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -295,14 +283,8 @@
 		089912901F516907003A3B21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				08FA0D111F56E0770033FD00 /* timg1.jpg */,
-				08FA0D121F56E0770033FD00 /* timg2.jpg */,
-				08FA0D131F56E0770033FD00 /* timg3.jpg */,
-				08FA0D141F56E0770033FD00 /* timg4.jpg */,
-				08FA0D151F56E0770033FD00 /* timg5.jpg */,
-				08FA0D161F56E0770033FD00 /* timg6.jpg */,
-				08FA0D171F56E0770033FD00 /* timg7.jpg */,
 				089912A11F516907003A3B21 /* Info.plist */,
+				081C130D1FC81B1A00ED3D9F /* backgroud.jpg */,
 				089912911F516907003A3B21 /* main.m */,
 				084A12E71F545F24008D955E /* PrefixHeader.pch */,
 			);
@@ -528,16 +510,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				089912A01F516907003A3B21 /* LaunchScreen.storyboard in Resources */,
-				08FA0D191F56E0770033FD00 /* timg2.jpg in Resources */,
 				08CDD61B1F8A028E006AB27A /* HistoryTableViewCell.xib in Resources */,
-				08FA0D1A1F56E0770033FD00 /* timg3.jpg in Resources */,
 				0899129D1F516907003A3B21 /* Assets.xcassets in Resources */,
-				08FA0D1B1F56E0770033FD00 /* timg4.jpg in Resources */,
-				08FA0D181F56E0770033FD00 /* timg1.jpg in Resources */,
-				08FA0D1E1F56E0770033FD00 /* timg7.jpg in Resources */,
-				08FA0D1C1F56E0770033FD00 /* timg5.jpg in Resources */,
+				081C130E1FC81B1B00ED3D9F /* backgroud.jpg in Resources */,
 				0899129B1F516907003A3B21 /* Main.storyboard in Resources */,
-				08FA0D1D1F56E0770033FD00 /* timg6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

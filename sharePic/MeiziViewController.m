@@ -12,6 +12,7 @@
 #import "MeiziCell.h"
 #import "Meizi.h"
 #import "AppDelegate.h"
+#import "TencentOpenAPI.framework/Headers/QQApiInterface.h"
 
 @interface MeiziViewController () <UICollectionViewDelegateFlowLayout, SYNavigationDropdownMenuDataSource, SYNavigationDropdownMenuDelegate>
 
@@ -128,7 +129,26 @@
     }
     else if([NSStringFromSelector(action) isEqualToString:@"paste:"])
     {
-        NSLog(@"-------------执行粘贴-------------");
+        NSLog(@"%@",self.meiziArray[indexPath.row]);
+        Meizi *rosi = self.meiziArray[indexPath.row];
+        
+//        NSMutableArray *photoURLArray = [NSMutableArray array];
+//        for (Meizi *rosi in self.meiziArray) {
+////            [photoURLArray addObject:rosi.image_url];
+//            NSLog(@"image_url is:%@",rosi.image_url);
+//        }
+//        NSString *imgPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"backgroud.jpg"];
+//        NSData *imgData = [NSData dataWithContentsOfFile:imgPath];
+        NSData *imgData = [NSData dataWithContentsOfURL:rosi.image_url];
+        QQApiImageObject *imgObj = [QQApiImageObject objectWithData:imgData
+                                                   previewImageData:imgData
+                                                              title:@"QQ互联测试"
+                                                        description:@"QQ互联测试分享"];
+//        QQApiTextObject *txtObj = [QQApiTextObject objectWithText:@"QQ互联测试"];
+        SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:imgObj];
+        //将内容分享到qq
+        QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+        [self handleSendResult:sent];
     }
 }
 
@@ -249,6 +269,71 @@
     [self.meiziArray removeAllObjects];
     [self.meiziArray addObjectsFromArray:[MeiziRequest cachedMeiziArrayWithCategory:category]];
     [self.collectionView reloadData];
+}
+
+#pragma mark
+- (void)handleSendResult:(QQApiSendResultCode)sendResult
+{
+    switch (sendResult)
+    {
+        case EQQAPIAPPNOTREGISTED:
+        {
+            UIAlertView *msgbox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"App未注册" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [msgbox show];
+            
+            break;
+        }
+        case EQQAPIMESSAGECONTENTINVALID:
+        case EQQAPIMESSAGECONTENTNULL:
+        case EQQAPIMESSAGETYPEINVALID:
+        {
+            UIAlertView *msgbox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"发送参数错误" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [msgbox show];
+            break;
+        }
+        case EQQAPIQQNOTINSTALLED:
+        {
+            UIAlertView *msgbox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"未安装手Q" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [msgbox show];
+            break;
+        }
+        case EQQAPITIMNOTINSTALLED:
+        {
+            UIAlertView *msgbox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"未安装TIM" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [msgbox show];
+            break;
+        }
+        case EQQAPIQQNOTSUPPORTAPI:
+        case EQQAPITIMNOTSUPPORTAPI:
+        {
+            UIAlertView *msgbox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"API接口不支持" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [msgbox show];
+            break;
+        }
+        case EQQAPISENDFAILD:
+        {
+            UIAlertView *msgbox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"发送失败" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [msgbox show];
+            
+            break;
+        }
+        case EQQAPIVERSIONNEEDUPDATE:
+        {
+            UIAlertView *msgbox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"当前QQ版本太低，需要更新" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [msgbox show];
+            break;
+        }
+        case ETIMAPIVERSIONNEEDUPDATE:
+        {
+            UIAlertView *msgbox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"当前QQ版本太低，需要更新" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [msgbox show];
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
 }
 
 @end

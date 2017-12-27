@@ -21,9 +21,11 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>tencentopenapi</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>sharePic</string>
+				<string>tencent101439501</string>
 			</array>
 		</dict>
 	</array>
